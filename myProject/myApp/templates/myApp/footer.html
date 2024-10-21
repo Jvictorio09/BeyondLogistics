@@ -1,0 +1,118 @@
+{% load static %}
+<footer>
+    <div class="footer-section">      
+        <div class="footer-inner">
+            <figure class="mb-0 footer-hearts">
+                <img src="{% static 'assets/images/footer-birds-img.png' %}" alt="" class="star">
+            </figure>
+            <div class="footer-msg floating-chat">
+                <figure class="mb-0 footer-chat-img">
+                    <img src="{% static 'assets/images/footer-chat-img.png' %}" alt="">
+                </figure>
+            </div>
+            <div class="container">
+                <div class="footer-content-box">
+                    <div class="row">
+                        <div class="col-lg-1 col-md-1 col-sm-1 d-lg-block d-none"></div>
+                        <div class="col-lg-5 col-md-6 col-sm-12">
+                            <h3 class="planning-h3">Let’s Start Planning!</h3>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="banner-btn discover-btn-banner">
+                                <a href="{% url 'about' %}" class="text-decoration-none"><i class="fa fa-clipboard-list"></i>Make Reservations</a>
+                            </div>
+                            <div class="learn-btn">
+                                <a href="{% url 'about' %}" class="text-decoration-none">learn more</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 d-lg-block d-none"></div>
+                </div>
+        </div>
+     
+        <div class="row">
+            <div class="col-xl-5 col-lg-4 col-md-6 col-sm-12">
+                <div class="footer-right-box">
+                    <a href="{% url 'index' %}" class="text-decoration-none">
+                        <figure class="footer-logo"><img src="{% static 'assets/images/footer-logo.png' %}" alt="" class="img-fluid"></figure>
+                    </a>
+                    <p class="footer-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <ul class="list-unstyled footer-social-icons">
+                        <li class="list-item">
+                            <a href="#"><i class="fa-brands fa-facebook-f marginLeft facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter marginLeft twiter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in marginLeft linkedin"></i></a>
+                            <a href="#"><i class="fa-solid fa-g marginLeft gmil"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 d-xl-block d-none"></div>
+            <div class="col-xl-3 col-lg-4 col-md-2 col-sm-12 d-lg-block d-none">
+                <div class="company-text">
+                    <p class="company-title">Company</p>
+                    <ul class="list-unstyled footer-ul1">
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'about' %}" class="text-decoration-none footer-link-p">About</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'services' %}" class="text-decoration-none footer-link-p">Services</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'gallery' %}" class="text-decoration-none footer-link-p">Gallery</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'organizer' %}" class="text-decoration-none footer-link-p">Organizer</a>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled footer-ul2">
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'index' %}" class="text-decoration-none footer-link-p">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'pricing' %}" class="text-decoration-none footer-link-p">Pricing</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'contact' %}" class="text-decoration-none footer-link-p">Contact Us</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-caret-right"></i>
+                            <a href="{% url 'single_gallery' %}" class="text-decoration-none footer-link-p">Gallery Single</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 d-md-block d-none">
+                <div class="footer-list footer-link contact-list">
+                    <div class="icon-list-box1">
+                        <ul class="list-unstyled contact-us-ul">
+                            <li class="list-item">
+                                <i class="fa-sharp fa-solid fa-phone-volume footer-location3"></i>
+                                <p class="contact-title">Call Us: </p>
+                                <a href="tel:+1234567890" class="text-decoration-none footer-link-auto">(123)456-789-00</a>
+                            </li>
+                            <li class="list-item">
+                                <i class="fa fa-envelope footer-location3"></i>
+                                <p class="contact-title">Email Us:</p>
+                                <a href="mailto:help@Bridely.com" class="text-decoration-none footer-link-auto">help@Bridely.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>          
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12"></div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <p class="footer-end-text">Copyright ©2022 Bridely.com All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    
+</footer>

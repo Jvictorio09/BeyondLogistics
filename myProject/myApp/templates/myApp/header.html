@@ -1,0 +1,98 @@
+{% load static %}
+<div class="home-header-section">
+<div class="header-top header-top1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 d-md-block d-sm-none">
+                <!-- You can add more content here if needed -->
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="header-right float-md-right float-none">
+                    <ul class="list-unstyled">
+                        <li class="d-inline-block">
+                            <a class="d-inline-block email-span text-decoration-none" href="mailto:info@sencare.com">
+                                Folllow us on:
+                            </a>
+                        </li>
+                        <li class="d-inline-block user-li"><i class="fa-brands fa-facebook-f"></i></li>
+                        <li class="d-inline-block user-li"><i class="fa-brands fa-twitter"></i></li>
+                        <li class="d-inline-block user-li"><i class="fa-brands fa-pinterest-p"></i></li>
+                        <li class="d-inline-block user-li"><i class="fa-brands fa-instagram"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<header class="header">
+    <div class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a class="navbar-brand pt-0" href="{% url 'index' %}">
+                    <img src="{% static 'assets/images/bridely-logo.png' %}" alt="Logo" class="img-fluid diverge-logo">
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link text-decoration-none navbar-text-color home-margin-top"
+                                href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none navbar-text-color"
+                                href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none navbar-text-color"
+                                href="{% url 'services' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-decoration-none navbar-text-color"
+                                href="{% url 'gallery' %}">Gallery</a>
+                        </li>
+                        <li class="nav-item dropdown redlight-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <div class="dropdown-menu dropdown-content-redlight">
+                                <ul class="list-unstyled">
+                                    <li class="nav-item">
+                                        <a class="dropdown-item nav-link" href="{% url 'pricing' %}">Pricing</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item nav-link" href="{% url 'single_gallery' %}">Gallery
+                                            Single</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item nav-link" href="{% url 'organizer' %}">Event Organizer</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="dropdown-item nav-link" href="{% url 'coming_soon' %}">Coming Soon</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn-talk ml-auto">
+                        <ul class="m-0 p-0">
+                            <li class="list-unstyled d-lg-inline-block">
+                                <a class="nav-link contact" href="{% url 'contact' %}">Order Services</a>
+                            </li>
+                            <li class="icon-search">
+                                <a href="" class="text-decoration-none play-button"><i
+                                        class="fa-solid fa-magnifying-glass"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+</div>
