@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You for Your Reservation</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #5860F8;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            max-width: 120px;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 30px 20px;
+            text-align: left;
+            background-color: #ffffff;
+        }
+        .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            color: #ffffff;
+            background-color: #5860F8;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #4752c4;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #888;
+            font-size: 12px;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .footer a {
+            color: #5860F8;
+            text-decoration: none;
+        }
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Email Header -->
+        <div class="header">
+            <img src="https://www.iriseupacademy.com/static/myapp/images/resource/author-6.png" alt="iRiseUp Academy Logo">
+            <h1>Thank You for Your Reservation!</h1>
+        </div>
+
+        <!-- Email Content -->
+        <div class="content">
+            <p>Hello {{ client_name }},</p>
+            <p>Thank you for reserving your special day with iRiseUp Academy! We are excited to work with you and make your event unforgettable.</p>
+            <p>If you have any questions or need support, feel free to <a href="mailto:support@iriseup.com">reach out to us</a>.</p>
+            <p>We’ll be in touch soon to confirm the details of your reservation.</p>
+
+            <p>Best regards,<br><strong>The iRiseUp Academy Team</strong></p>
+        </div>
+
+        <!-- Email Footer -->
+        <div class="footer">
+            <p>iRiseUp Academy, Columbus, Ohio, USA</p>
+        </div>
+    </div>
+</body>
+</html>

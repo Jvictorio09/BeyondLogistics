@@ -1,118 +1,181 @@
 {% load static %}
+<style>
+    .custom-footer-section {
+        background-color: #f7f7f7;
+        padding: 60px 0;
+    }
+
+    .event-planning-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .custom-footer-content {
+        margin-bottom: 8px;
+    }
+
+    .custom-footer-content p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .footer-btn-links a {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 24px;
+        margin-right: 10px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-btn-links a:hover {
+        background-color: #0056b3;
+    }
+
+    .footer-info-box .footer-description-text {
+        margin: 20px 0;
+        font-size: 16px;
+        color: #777;
+    }
+
+    .footer-social-list a {
+        color: #333;
+        margin-right: 15px;
+    }
+
+    .footer-social-list a:hover {
+        color: #007bff;
+    }
+
+    .footer-contact-details ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-contact-details ul li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .footer-contact-details ul li i {
+        font-size: 24px;
+        margin-right: 10px;
+        color: #007bff;
+    }
+
+    .footer-contact-details ul li p {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .footer-contact-details ul li .contact-label {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .footer-copyright-text {
+        text-align: right;
+        font-size: 12px;
+        color: #888;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .custom-footer-section {
+            padding: 40px 0;
+        }
+
+        .custom-footer-content, .footer-contact-details {
+            text-align: left;
+        }
+
+        .footer-btn-links {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-top: 20px;
+        }
+
+        .footer-btn-links a {
+            margin-bottom: 10px;
+        }
+
+        .footer-logo img {
+            max-width: 300px;
+        }
+
+        .footer-copyright-text {
+            text-align: left;
+        }
+
+        .footer-contact-details ul li {
+            justify-content: left;
+        }
+    }
+</style>
 <footer>
-    <div class="footer-section">      
-        <div class="footer-inner">
-            <figure class="mb-0 footer-hearts">
-                <img src="{% static 'assets/images/footer-birds-img.png' %}" alt="" class="star">
-            </figure>
-            <div class="footer-msg floating-chat">
-                <figure class="mb-0 footer-chat-img">
-                    <img src="{% static 'assets/images/footer-chat-img.png' %}" alt="">
-                </figure>
-            </div>
-            <div class="container">
-                <div class="footer-content-box">
-                    <div class="row">
-                        <div class="col-lg-1 col-md-1 col-sm-1 d-lg-block d-none"></div>
-                        <div class="col-lg-5 col-md-6 col-sm-12">
-                            <h3 class="planning-h3">Let’s Start Planning!</h3>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="banner-btn discover-btn-banner">
-                                <a href="{% url 'about' %}" class="text-decoration-none"><i class="fa fa-clipboard-list"></i>Make Reservations</a>
-                            </div>
-                            <div class="learn-btn">
-                                <a href="{% url 'about' %}" class="text-decoration-none">learn more</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-1 col-md-1 col-sm-1 d-lg-block d-none"></div>
-                </div>
-        </div>
-     
-        <div class="row">
-            <div class="col-xl-5 col-lg-4 col-md-6 col-sm-12">
-                <div class="footer-right-box">
-                    <a href="{% url 'index' %}" class="text-decoration-none">
-                        <figure class="footer-logo"><img src="{% static 'assets/images/footer-logo.png' %}" alt="" class="img-fluid"></figure>
-                    </a>
-                    <p class="footer-section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <ul class="list-unstyled footer-social-icons">
-                        <li class="list-item">
-                            <a href="#"><i class="fa-brands fa-facebook-f marginLeft facebook"></i></a>
-                            <a href="#"><i class="fa-brands fa-twitter marginLeft twiter"></i></a>
-                            <a href="#"><i class="fa-brands fa-linkedin-in marginLeft linkedin"></i></a>
-                            <a href="#"><i class="fa-solid fa-g marginLeft gmil"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-1 col-md-1 col-sm-1 d-xl-block d-none"></div>
-            <div class="col-xl-3 col-lg-4 col-md-2 col-sm-12 d-lg-block d-none">
-                <div class="company-text">
-                    <p class="company-title">Company</p>
-                    <ul class="list-unstyled footer-ul1">
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'about' %}" class="text-decoration-none footer-link-p">About</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'services' %}" class="text-decoration-none footer-link-p">Services</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'gallery' %}" class="text-decoration-none footer-link-p">Gallery</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'organizer' %}" class="text-decoration-none footer-link-p">Organizer</a>
-                        </li>
-                    </ul>
-                    <ul class="list-unstyled footer-ul2">
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'index' %}" class="text-decoration-none footer-link-p">Home</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'pricing' %}" class="text-decoration-none footer-link-p">Pricing</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'contact' %}" class="text-decoration-none footer-link-p">Contact Us</a>
-                        </li>
-                        <li>
-                            <i class="fa-solid fa-caret-right"></i>
-                            <a href="{% url 'single_gallery' %}" class="text-decoration-none footer-link-p">Gallery Single</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 d-md-block d-none">
-                <div class="footer-list footer-link contact-list">
-                    <div class="icon-list-box1">
-                        <ul class="list-unstyled contact-us-ul">
+    <div class="custom-footer-section">      
+
+        <!-- Main Content Container -->
+        <div class="container">
+            <!-- Footer Links and Company Information -->
+            <div class="row">
+                <div class="col-xl-5 col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-info-box">
+                        <a href="{% url 'index' %}" class="text-decoration-none">
+                            <figure class="footer-logo">
+                                <img src="{% static 'assets/images/footer-logo.png' %}" alt="Beyond Logistics Event Planning logo" class="img-fluid">
+                            </figure>
+                        </a>
+                        <p class="footer-description-text">We specialize in creating unforgettable events tailored to your unique vision. Let us handle the logistics while you enjoy the moment.</p>
+                        <ul class="list-unstyled footer-social-list">
                             <li class="list-item">
-                                <i class="fa-sharp fa-solid fa-phone-volume footer-location3"></i>
-                                <p class="contact-title">Call Us: </p>
-                                <a href="tel:+1234567890" class="text-decoration-none footer-link-auto">(123)456-789-00</a>
-                            </li>
-                            <li class="list-item">
-                                <i class="fa fa-envelope footer-location3"></i>
-                                <p class="contact-title">Email Us:</p>
-                                <a href="mailto:help@Bridely.com" class="text-decoration-none footer-link-auto">help@Bridely.com</a>
+                                <a href="https://www.facebook.com/beyondlogisticsevents" aria-label="Follow us on Facebook" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-facebook-f marginLeft facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/beyondlogisticsevents/" aria-label="Follow us on Instagram" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-instagram marginLeft instagram"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>          
-        </div>
-        <div class="row">
-            <div class="col-lg-5 col-md-6 col-sm-12"></div>
-            <div class="col-lg-7 col-md-6 col-sm-12">
-                <p class="footer-end-text">Copyright ©2022 Bridely.com All Rights Reserved</p>
+
+                <!-- Contact Information -->
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-contact-details">
+                        <ul class="list-unstyled contact-us-ul">
+                            <li class="list-item">
+                                <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                                <div>
+                                    <p>Call Us: </p>
+                                    <a href="tel:+639088887973" class="text-decoration-none contact-label" aria-label="Call us">+63 908 888 7973</a>
+                                </div>
+                            </li>
+                            <li class="list-item">
+                                <i class="fa fa-envelope"></i>
+                                <div>
+                                    <p>Email Us:</p>
+                                    <a href="mailto:hello@beyondlogisticsevent.com" class="text-decoration-none contact-label" aria-label="Email us">hello@beyondlogisticsevent.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>          
+            </div>
+
+            <!-- Footer End Section -->
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-12"></div>
+                <div class="col-lg-7 col-md-6 col-sm-12">
+                    <p class="footer-copyright-text">Copyright ©2024 beyondlogisticsevent.com | All Rights Reserved</p>
+                </div>
             </div>
         </div>
     </div>
-    
 </footer>

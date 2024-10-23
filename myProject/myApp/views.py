@@ -37,17 +37,75 @@ def single_gallery(request):
 
 from django.shortcuts import render, redirect
 
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from django.shortcuts import render, redirect
+from django.urls import reverse
+from .forms import ReservationForm
+
 def make_reservation(request):
     if request.method == 'POST':
-        # Process form data
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        guests = request.POST.get('guests')
-        date = request.POST.get('date')
-        event = request.POST.get('event')
-        
-        # You can save to the database or perform other actions here
-        
-        return redirect('success')  # Redirect to a success page
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            # Get form data
+            event_date = form.cleaned_data['event_date']
+            event_type = form.cleaned_data['event_type']
+            client_name = form.cleaned_data['client_name']
+            email = form.cleaned_data['email']
+            contact_number = form.cleaned_data['contact_number']
+            guests = form.cleaned_data['guests']
+            venue = form.cleaned_data['venue']
 
-    return render(request, 'index.html')
+            # 1. Send Email to Admin
+            admin_subject = 'New Event Reservation'
+            admin_context = {
+                'event_date': event_date,
+                'event_type': event_type,
+                'client_name': client_name,
+                'email': email,
+                'contact_number': contact_number,
+                'guests': guests,
+                'venue': venue
+            }
+
+            # Render HTML email for admin
+            admin_html_content = render_to_string('admin_email_template.html', admin_context)
+            admin_text_content = strip_tags(admin_html_content)
+
+            # Create and send admin email
+            admin_email = EmailMultiAlternatives(admin_subject, admin_text_content, 'hello@beyondlogisticsevent.com', ['hello@beyondlogisticsevent.com'])
+            admin_email.attach_alternative(admin_html_content, "text/html")
+            admin_email.send()
+
+            # 2. Send Confirmation Email to Customer
+            send_confirmation_email(client_name, email)
+
+            # Optionally, redirect to a success page or render a success message
+            return redirect('index')  # Change this to your success page
+    else:
+        form = ReservationForm()
+
+    return render(request, 'myApp/index.html', {'form': form})
+
+
+def send_confirmation_email(client_name, client_email):
+    subject = 'Thank You for Your Reservation with Beyond Logistics!'
+    from_email = 'hello@beyondlogisticsevent.com'
+    to_email = [client_email]
+
+    # Prepare the context for the email template
+    context = {
+        'client_name': client_name,
+    }
+
+    # Render the HTML template with context
+    html_content = render_to_string('customer_email_template.html', context)
+    text_content = strip_tags(html_content)  # Fallback for email clients that don't support HTML
+
+    # Create email
+    email = EmailMultiAlternatives(subject, text_content, from_email, to_email)
+    email.attach_alternative(html_content, "text/html")
+
+    # Send email
+    email.send()

@@ -1,0 +1,7 @@
+{% extends 'myApp/base.html' %}
+{% load static %}
+{% block title %}Home | Bridely{% endblock %}
+
+{% block content %}
+    
+{% endblock %}

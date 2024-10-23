@@ -1,14 +1,168 @@
 {% extends 'myApp/base.html' %}
 {% load static %}
-{% block title %}Home | Bridely{% endblock %}
+{% block title %}Home | Beyond Logistics {% endblock %}
 
 {% block content %}
+
+<style>
+    html {
+    scroll-behavior: smooth;
+}
+
+.banner-img-content img.banner-img-width {
+    border: 5px solid white; /* Add white border */
+    border-top-right-radius: 30px; /* Curve top-right corner */
+    border-bottom-left-radius: 30px; /* Curve bottom-left corner */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.video-frame {
+    width: 1110px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* Centering the video frame */
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .video-frame {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Ensure it doesn’t go beyond screen width */
+        aspect-ratio: 16/9; /* Maintain aspect ratio */
+    }
+}
+
+.story-section .carousel-inner .story-img1 img {
+    border: 5px solid white; /* White border */
+    border-radius: 20px 0 20px 0; /* Curves on two corners (top-left and bottom-right) */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.story-section .carousel-inner .story-img1 img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+#form-section .form-section-img img {
+    filter: drop-shadow(10px 0px 16px #cccc);
+    transition: ease-in-out 0.3s;
+    border: 5px solid white; /* Adds a white border */
+    border-radius: 0 20px 0 20px; /* Curls the upper right and lower left corners */
+}
+
+.partners-section {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Background for the section */
+}
+
+.partners-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px; /* Space between logos */
+}
+
+.partner-item {
+    flex: 1;
+    text-align: center;
+}
+
+.partner-logo img {
+    max-width: 100px; /* Control the size of the logos */
+    transition: transform 0.3s ease-in-out;
+}
+
+.partner-logo img:hover {
+    transform: scale(1.1); /* Hover effect to slightly enlarge logos */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .partners-card ul {
+        flex-direction: column; /* Stack logos vertically */
+        gap: 20px; /* Reduce gap between logos */
+    }
+    
+    .partner-logo img {
+        max-width: 80px; /* Smaller size for logos on mobile */
+    }
+}
+
+.about-section-form {
+    border: 1px solid #e0e0e0; /* Subtle light grey border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the form for spacing */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Very light shadow for depth */
+    background-color: #f7e3e36e; /* Optional background color */
+}
+
+
+</style>
+<div class="home-header-section">
+    <div class="header-top header-top1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 d-md-block d-sm-none">
+                    <!-- You can add more content here if needed -->
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="header-right float-md-right float-none">
+                        <ul class="list-unstyled">
+                            <li class="d-inline-block">
+                                <a class="d-inline-block email-span text-decoration-none" href="mailto:info@sencare.com">
+                                    Follow us on:
+                                </a>
+                            </li>
+                            <li class="d-inline-block user-li">
+                                <a href="https://www.facebook.com/beyondlogisticsevents" aria-label="Follow us on Facebook" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="d-inline-block user-li">
+                                <a href="https://www.instagram.com/beyondlogisticsevents/" aria-label="Follow us on Instagram" target="_blank" rel="noopener">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <header class="header">
+        <div class="main-header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <a class="navbar-brand pt-0" href="{% url 'index' %}">
+                        <img src="{% static 'assets/images/bridely-logo.png' %}" alt="Logo" class="img-fluid diverge-logo">
+                    </a>
+                </nav>    
+            </div>      
+        </div>
+    </header>
 <div class="home-banner-section overflow-hidden position-relative">
     <figure class="banner-img1 mb-0">
-        <img src="{% static 'assets/images/banner-img1.png' %}" alt="" class="star">
+               
     </figure>
     <figure class="banner-img2 mb-0">
-        <img src="{% static 'assets/images/banner-img2.png' %}" alt="" class="star">
+               
     </figure>
     <div class="banner-container-box">
         <div class="container">
@@ -16,21 +170,20 @@
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-md-0 mb-4 text-md-left text-center order-lg-1 order-2">
                     <div class="banner-img-content position-relative">
                         <figure class="banner-img mb-0">
-                            <img class="img-fluid banner-img-width" src="{% static 'assets/images/bridely-banner-left-img.png' %}" alt="">
+                            <img class="img-fluid banner-img-width" src="{% static 'assets/images/beyond-logistic-banner-left.png' %}" alt="">
                         </figure>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-2 order-1">
                     <div class="home-banner-text position-relative" data-aos="fade-up" id="myContentDIV">
                         <figure class="ring-icon-img mb-0">
-                            <img src="{% static 'assets/images/ring-icon-banner.png' %}" alt="">
                         </figure>
                         <h1>Perfect Weddings <span class="h1-text">Made Easy!</span></h1>
                         <p class="banner-paragraph">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusm tempor incididunt
+                            Your Perfect Wedding, Planned with Ease and Care
                         </p>
-                        <div class="banner-btn discover-btn-banner">
-                            <a href="{% url 'about' %}" class="text-decoration-none"><i class="fa fa-clipboard-list"></i>Make Reservations</a>
+                        <div class="index-btn">
+                            <a href="{% url 'index' %}#form-section" class="text-decoration-none"><i class="fa fa-clipboard-list"></i> Make Reservations</a>
                         </div>
                     </div>
                 </div>
@@ -44,73 +197,51 @@
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-1 order-1">
                 <div class="about-us-content aos-init aos-animate" data-aos="fade-up">
-                    <h5 class="autorix-text"><span>About Bridely</span></h5>
-                    <h2>What We Do, We Do With Passion</h2>
-                    <p class="aboutus-p">Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusm tempor incididunt</p>
-                    <div class="banner-btn discover-btn-banner">
-                        <a href="{% url 'about' %}" class="text-decoration-none">learn more</a>
+                    <h5 class="autorix-text"><span>About Beyond Logistics </span></h5>
+                    <h2>We Make Every Moment Unforgettable</h2>
+                    <p class="aboutus-p">For over 10 years, we've been dedicated to turning your moments into lasting memories. Your vision is our priority, and we're passionate about delivering exceptional experiences tailored just for you. With Beyond Logistics, every detail is carefully crafted to make your event truly unforgettable.</p>
+                    <div class="index-btn">
+                        <a href="{% url 'index' %}#form-section" class="text-decoration-none">learn more</a>
                     </div>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12 order-lg-2 order-2">
                 <div class="about-content-img">
-                    <figure class="mb-0 about-section-f1">
-                        <img src="{% static 'assets/images/about-bird-icon.png' %}" alt="" class="star">
-                    </figure>
                     <figure class="mb-0 about-section-f2">
                         <img src="{% static 'assets/images/about-img1.png' %}" alt="">
                     </figure>
                     <figure class="mb-0 about-section-f3">
                         <img src="{% static 'assets/images/about-img2.png' %}" alt="">
                     </figure>
-                    <figure class="mb-0 about-section-f4">
-                        <img src="{% static 'assets/images/about-img3.png' %}" alt="">
-                    </figure>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="video-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="video-section-content" data-aos="fade-up">
-                    <figure class="mb-0 video-section-image">
-                        <img src="{% static 'assets/images/video-img.png' %}" alt="" class="fluid-img">
-                    </figure>
-                    <a class="popup-vimeo" href="https://previews.customer.envatousercontent.com/h264-video-previews/5afc8770-eb05-42ec-b854-9fb6b3bb52c5/40068661.mp4">
-                        <figure class="mb-0 video-play-img">
-                            <img src="{% static 'assets/images/video-play-icon.png' %}" alt="" class="fluid-img">
-                        </figure>
-                    </a>
-                </div>
+<div class="video-frame">
+    <script src="https://fast.wistia.com/embed/medias/flobd8fo9t.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <div class="wistia_responsive_wrapper" style="width: 100%; height: 100%; position: relative;">
+        <div class="wistia_embed wistia_async_flobd8fo9t seo=true videoFoam=true" style="width: 100%; height: 100%; position: relative;">
+            <div class="wistia_swatch" style="height: 100%; left: 0; opacity: 0; overflow: hidden; position: absolute; top: 0; transition: opacity 200ms; width: 100%;">
+                <img src="https://fast.wistia.com/embed/medias/flobd8fo9t/swatch" style="filter: blur(5px); height: 100%; object-fit: contain; width: 100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
             </div>
         </div>
     </div>
 </div>
 
+<!--                             
 <section class="categories-section overflow-hidden position-relative">
-    <figure class="hearts-img">
-        <img src="{% static 'assets/images/categories-img1.png' %}" alt="" class="star">
-    </figure>
-    <figure class="design-img">
-        <img src="{% static 'assets/images/categories-img6.png' %}" alt="" class="star">
-    </figure>
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-1 order-1">
                 <div class="about-us-content" data-aos="fade-up">
-                    <div class="cate-icon-outer">
-                        <figure class="cate-icon-img mb-0">
-                            <img src="{% static 'assets/images/categories-logo-img.png' %}" alt="">
-                        </figure>
-                    </div>
                     <h2>Includes Various Product Categories</h2>
                     <p class="aboutus-p">Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusm tempor incididunt.</p>
-                    <div class="banner-btn discover-btn-banner">
-                        <a href="{% url 'about' %}" class="text-decoration-none">learn more</a>
+                    <div class="index-btn">
+                        <a href="{% url 'index' %}#form-section" class="text-decoration-none">learn more</a>
                     </div>
                 </div>
             </div>
@@ -153,6 +284,7 @@
         </div>
     </div>
 </section>
+-->
 
 
 <div class="reservation-section overflow-hidden">
@@ -160,9 +292,9 @@
         <div class="row">
             <div class="col-12">
                 <figure class="mb-0 reservation-logo">
-                    <img src="{% static 'assets/images/reservation-logo.png' %}" alt="">
+                      
                 </figure>
-                <h2 class="text-center">The Unrivaled Scenery, Unforgettable Wedding Program</h2>
+                <h2 class="text-center">Stunning Venues, Unforgettable Celebrations</h2>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
@@ -181,70 +313,18 @@
             </div>
         </div>
 
-        <div class="banner-btn discover-btn-banner">
-            <a href="{% url 'about' %}" class="text-decoration-none">Make Reservations</a>
+        <div class="index-btn">
+            <a href="{% url 'index' %}#form-section" class="text-decoration-none">Make Reservations</a>
         </div>
     </div>
 </div>
 
 
-<section class="event-section overflow-hidden position-relative">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 order-lg-2 order-2">
-                <div class="about-us-content aos-init aos-animate" data-aos="fade-up">
-                    <div class="cate-icon-outer">
-                        <figure class="cate-icon-img mb-0">
-                            <img src="{% static 'assets/images/event-design-logo.png' %}" alt="">
-                        </figure>
-                    </div>
-                    <h2>Let’s Plan Your Next Event Together</h2>
-                    <p class="aboutus-p">Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusm tempor incididunt.</p>
-                    <div class="banner-btn discover-btn-banner">
-                        <a href="{% url 'about' %}" class="text-decoration-none">learn more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-5 col-md-5 col-sm-12 order-lg-1 order-1">
-                <div class="event-content-img aos-init aos-animate">
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <figure class="mb-0 icons-fig">
-                                <img src="{% static 'assets/images/event-img1.png' %}" alt="">
-                            </figure>
-                            <h6>Entertainment</h6>
-                        </li>
-                        <li>
-                            <figure class="mb-0 icons-fig">
-                                <img src="{% static 'assets/images/event-img2.png' %}" alt="">
-                            </figure>
-                            <h6>Dining</h6>
-                        </li>
-                    </ul>
-                    <ul class="list-unstyled second mb-0">
-                        <li>
-                            <figure class="mb-0 icons-fig">
-                                <img src="{% static 'assets/images/event-img3.png' %}" alt="">
-                            </figure>
-                            <h6>Decor</h6>
-                        </li>
-                        <li>
-                            <figure class="mb-0 icons-fig">
-                                <img src="{% static 'assets/images/event-img4.png' %}" alt="">
-                            </figure>
-                            <h6>Swag & Gifting</h6>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 
+<!--                   
 <section class="event-org-section overflow-hidden position-relative">
     <figure class="hearts-img">
-        <img src="{% static 'assets/images/categories-img1.png' %}" alt="" class="star">
     </figure>
     <div class="container">
         <div class="row">
@@ -257,8 +337,8 @@
                     </div>
                     <h2>Meet Our Creative Event Organizer</h2>
                     <p class="aboutus-p">Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusm tempor incididunt.</p>
-                    <div class="banner-btn discover-btn-banner">
-                        <a href="{% url 'about' %}" class="text-decoration-none">learn more</a>
+                    <div class="index-btn">
+                        <a href="{% url 'index' %}#form-section" class="text-decoration-none">learn more</a>
                     </div>
                 </div>
             </div>
@@ -331,6 +411,7 @@
         </div>
     </div>
 </section>
+-->
 
 
 <section class="story-section overflow-hidden position-relative">
@@ -338,33 +419,39 @@
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                 <figure class="mb-0 about-section-f1">
-                    <img src="{% static 'assets/images/about-bird-icon.png' %}" alt="" class="star">
+                    <!-- Add image or relevant figure if necessary -->
                 </figure>
                 <div class="story-card-content aos-init aos-animate" data-aos="fade-up">
                     <figure class="story-card-img">
                         <img src="{% static 'assets/images/story-card-img.png' %}" alt="">
                     </figure>
-                    <h3>Marry Jain & Jamie Foster</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua quis ipsum suspendisse ultrices</p>
-                    <div class="banner-btn discover-btn-banner">
-                        <a href="{% url 'about' %}" class="text-decoration-none">
-                            <i class="fa fa-play"></i>See the Story
-                        </a>
-                    </div>
+                    <h3>Paw & Alecks</h3>
+                    <p>Alecks, a dear friend and fellow event supplier, entrusted us with the incredible honor of planning her Catholic and Indian fusion wedding. With so much love surrounding them from friends and family, we embraced the challenge of blending traditions seamlessly. We were truly privileged to craft a celebration that beautifully reflected their love story.</p>
                 </div>
             </div>
+            
             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <figure class="mb-0 story-img1">
-                                <img src="{% static 'assets/images/story-section-img1.png' %}" alt="" class="img-fluid">
-                            </figure>
-                        </div>
+                        <!-- Carousel Items for 4 images -->
                         <div class="carousel-item active">
                             <figure class="mb-0 story-img1">
-                                <img src="{% static 'assets/images/story-section-img1.png' %}" alt="" class="img-fluid">
+                                <img src="{% static 'assets/images/Paw_and_aleck/1.png' %}" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="carousel-item">
+                            <figure class="mb-0 story-img1">
+                                <img src="{% static 'assets/images/Paw_and_aleck/2.png' %}" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="carousel-item">
+                            <figure class="mb-0 story-img1">
+                                <img src="{% static 'assets/images/Paw_and_aleck/3.png' %}" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="carousel-item">
+                            <figure class="mb-0 story-img1">
+                                <img src="{% static 'assets/images/Paw_and_aleck/4.png' %}" alt="" class="img-fluid">
                             </figure>
                         </div>
                     </div>
@@ -383,10 +470,7 @@
 
 <!-- Other content of index.html -->
 
-<section class="form-section overflow-hidden">
-    <figure class="hearts-img">
-        <img src="{% static 'assets/images/categories-img1.png' %}" alt="" class="star">
-    </figure>
+<section id="form-section" class="form-section overflow-hidden">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -399,55 +483,62 @@
                     <figure class="cate-icon-img">
                         <img src="{% static 'assets/images/categories-logo-img.png' %}" alt="">
                     </figure>
-                    <h2 class="contact-us-title">Make Reservations</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusm tempor incididunt</p>
+                    <h2 class="contact-us-title">Reserve Your Special Day</h2>
+                    <p>Let us bring your vision to life, from intimate gatherings to grand celebrations, making every moment unforgettable.</p>
+
                     <form id="form_id" method="post" action="{% url 'make_reservation' %}">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group contact-form-margin">
-                                    <i class="fa-solid fa-user icons-form"></i> 
-                                    <input type="text" class="form-control input-text" id="validationCustom01" placeholder="Your Name" name="name" required="">
+                                    <i class="fa fa-calendar-days icons-form"></i>
+                                    <input type="date" class="form-control input-text" id="eventDate" placeholder="Date of Event" name="event_date" required="">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group contact-form-margin">
-                                    <i class="fa fa-envelope icons-form"></i> 
-                                    <input type="email" class="form-control input-text" id="validationCustom02" placeholder="Your Email" name="email" required="">
+                                    <i class="fa-solid fa-people-group icons-form"></i>
+                                    <select class="form-control select-icon select-event" name="event_type">
+                                        <option value="">Select Type of Event:</option>
+                                        <option>Wedding</option>
+                                        <option>Debut</option>
+                                        <option>Birthday</option>
+                                        <option>Corporate</option>
+                                        <option>Others</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group contact-form-margin">
-                                    <i class="fa-solid fa-people-group icons-form"></i>
-                                    <input type="text" class="form-control input-text" id="validationCustom03" placeholder="Guests" name="guests" required="">
+                                    <i class="fa-solid fa-user icons-form"></i>
+                                    <input type="text" class="form-control input-text" id="clientName" placeholder="Client’s Name" name="client_name" required="">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group contact-form-margin">
-                                    <i class="fa fa-calendar-days icons-form"></i>
-                                    <select class="form-control" name="date">
-                                        <option value="0">Select Date:</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                    </select>
+                                    <i class="fa fa-envelope icons-form"></i>
+                                    <input type="email" class="form-control input-text" id="clientEmail" placeholder="Email Address" name="email" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group contact-form-margin">
+                                    <i class="fa fa-phone icons-form"></i>
+                                    <input type="tel" class="form-control input-text" id="contactNumber" placeholder="Contact Number" name="contact_number" required="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group contact-form-margin">
+                                    <i class="fa-solid fa-people-group icons-form"></i>
+                                    <input type="number" class="form-control input-text" id="guestsNumber" placeholder="Number of Guests" name="guests" required="">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group special">
-                            <select class="form-control select-icon select-event" name="event">
-                                <option value="0">Select Event:</option>
-                                <option>America</option>
-                                <option>Australia</option>
-                                <option>Saudia</option>
-                                <option>Belgium</option>
-                            </select>
+                            <input type="text" class="form-control" id="venue" placeholder="Venue (If no venue yet, let us know if it’s in Metro Manila or Tagaytay)" name="venue" required="">
                         </div>
                         <div class="banner-btn discover-btn-banner">
                             <button type="submit" class="btn btn-primary">Make Reservations</button>
@@ -459,72 +550,39 @@
     </div>
 </section>
 
-<div class="icons-section">
+
+<div class="partners-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-             <div class="icons-card">
-                <div class="row">
-                 <ul class="list-unstyled mb-0">
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon1.png' %}" alt="">
-                         </figure>
-                     </li>
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon2.png' %}" alt="">
-                         </figure>
-                     </li>
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon3.png' %}" alt="">
-                         </figure>
-                     </li>
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon4.png' %}" alt="">
-                         </figure>
-                     </li>
-                 </ul>
-                 <ul class="list-unstyled second mb-0">
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon5.png' %}" alt="">
-                         </figure>
-                     </li>
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon6.png' %}" alt="">
-                         </figure>
-                     </li>
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon7.png' %}" alt="">
-                         </figure>
-                     </li>
-                     <li>
-                         <figure class="mb-0 icons-fig">
-                             <img src="{% static 'assets/images/icon8.png' %}" alt="">
-                         </figure>
-                     </li>
-                 </ul>
+                <div class="partners-card">
+                    <div class="row">
+                        <ul class="list-unstyled d-flex justify-content-center align-items-center mb-0">
+                            <li class="partner-item">
+                                <figure class="partner-logo mb-0">
+                                    <img src="{% static 'assets/images/icon1.png' %}" alt="Partner 1">
+                                </figure>
+                            </li>
+                            <li class="partner-item">
+                                <figure class="partner-logo mb-0">
+                                    <img src="{% static 'assets/images/icon2.png' %}" alt="Partner 2">
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-             </div>
             </div>
         </div>
     </div>
- </div>
+</div>
+
+
  
  <section class="insta-feed-section">
-    <figure class="mb-0 insta-feed-img">
-        <img src="{% static 'assets/images/footer-background-img.jpg' %}" alt="" class="img-fluid star">
-    </figure>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <figure class="mb-0 insta-bird-fig">
-                    <img src="{% static 'assets/images/insta-bird-img.png' %}" alt="" class="star">
                 </figure>
                 <figure class="insta-fig">
                     <img src="{% static 'assets/images/insta-icon.png' %}" alt="">
@@ -537,7 +595,7 @@
                 <figure class="mb-0 insta-section-imgs">
                     <img src="{% static 'assets/images/insta-section-img1.png' %}" alt="" class="img-fluid">
                     <div class="hover_box_plus">
-                        <a href="#"><i class="fa-brands fa-instagram"></i>Bridely</a>
+                        <a href="https://www.instagram.com/beyondlogisticsevents/"><i class="fa-brands fa-instagram"></i>Beyond Logistics </a>
                     </div>
                 </figure>
             </div>
@@ -545,7 +603,7 @@
                 <figure class="mb-0 insta-section-imgs">
                     <img src="{% static 'assets/images/insta-section-img2.png' %}" alt="" class="img-fluid">
                     <div class="hover_box_plus">
-                        <a href="#"><i class="fa-brands fa-instagram"></i>Bridely</a>
+                        <a href="https://www.instagram.com/beyondlogisticsevents/"><i class="fa-brands fa-instagram"></i>Beyond Logistics </a>
                     </div>
                 </figure>
             </div>
@@ -553,7 +611,7 @@
                 <figure class="mb-0 insta-section-imgs insta-section-imgs-mb">
                     <img src="{% static 'assets/images/insta-section-img3.png' %}" alt="" class="img-fluid">
                     <div class="hover_box_plus">
-                        <a href="#"><i class="fa-brands fa-instagram"></i>Bridely</a>
+                        <a href="https://www.instagram.com/beyondlogisticsevents/"><i class="fa-brands fa-instagram"></i>Beyond Logistics </a>
                     </div>
                 </figure>
             </div>
@@ -561,7 +619,7 @@
                 <figure class="mb-0 insta-section-imgs insta-section-imgs-mb">
                     <img src="{% static 'assets/images/insta-section-img4.png' %}" alt="" class="img-fluid">
                     <div class="hover_box_plus">
-                        <a href="#"><i class="fa-brands fa-instagram"></i>Bridely</a>
+                        <a href="https://www.instagram.com/beyondlogisticsevents/"><i class="fa-brands fa-instagram"></i>Beyond Logistics </a>
                     </div>
                 </figure>
             </div>
