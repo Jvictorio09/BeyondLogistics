@@ -199,9 +199,6 @@
     left: 74px;
   }
   /* insta-section */
-  .insta-feed-section {
-    padding: 104px 0 830px;
-  }
   .about-us-section .about-left-back-img {
     left: -49%;
   }
@@ -264,23 +261,13 @@
     right: 150px;
   }
   /* insta-section */
-  .insta-feed-section {
-    padding: 104px 0 780px;
-  }
+
   /* form-section */
   .form-section .hearts-img {
     top: 135px;
     right: 160px;
   }
-  /* footer-section */
-  .footer-section .footer-chat-img {
-    right: 100px;
-    top: 302px;
-  }
-  .footer-section .footer-hearts {
-    left: 80px;
-    top: 260px;
-  }
+
   /* .home-banner-section .banner-container-box .home-banner-text {
     padding-left: 200px;
   } */
@@ -338,20 +325,7 @@
     top: 172px;
   }
   /* insta-section */
-  .insta-feed-section {
-    padding: 104px 0 712px;
-  }
-  /* footer-section */
-  .footer-section .footer-hearts {
-    left: 29px;
-    top: 260px;
-  }
-  .footer-section .footer-content-box {
-    margin-bottom: 190px;
-  }
-  .footer-section .footer-hearts img{
-    width: 67%;
-  }
+
   /* about-us-section */
   .about-us-section::after {
     right: -100px;
@@ -514,28 +488,6 @@
     right: 280px;
     top: -14px;
   }
-  .insta-feed-section {
-    padding: 104px 0 618px;
-  }
-  /* footer-section */
-  .footer-section .footer-hearts {
-    left: 29px;
-    top: 175px;
-  }
-  .footer-section .footer-chat-img {
-    right: 36px;
-    top: 260px;
-  }
-  .footer-section::after {
-    width: 335px;
-    height: 130px;
-  }
-  .footer-section .footer-right-box {
-    padding: 110px 50px 49px;
-    width: 434px;
-    height: 430px;
-    margin-top: -128px;
-  }
   .about-us-section .about-left-back-img {
     left: -91%;
   }
@@ -612,12 +564,7 @@
   .our-servicess .section-2::after {
     right: -113px;
     bottom: -210px;
-  }
-  /* footer */
-  .footer-section .footer-list .icon-list-box1 li {
-    padding-left: 10px;
-    margin-bottom: 12px;
-  }
+  }s
   .gallery-single {
     padding: 166px 0 0px;
   }
@@ -972,9 +919,7 @@
   .insta-feed-section .insta-fig {
     margin-bottom: 20px;
   }
-  .insta-feed-section {
-    padding: 100px 0 551px;
-  }
+
   /* icons-section */
   .icons-section ul li:first-child {
     width: 268px;
@@ -1202,32 +1147,8 @@
   .home-banner-section .banner-container-box .sub-banner-section .banner-paragraph {
     padding: 0 165px;
   }
-  /* footer-section */
-  .footer-section {
-    padding: 94px 0 100px;
-  }
-  .footer-section .company-text .company-title {
-    margin-bottom: 25px;
-  }
-  .footer-section .footer-chat-img img {
-    width: 80%;
-  }
-  .footer-section .footer-right-box {
-    padding: 90px 31px 28px;
-    width: 403px;
-    height: 386px;
-    margin-top: -68px;
-  }
-  .footer-section .footer-content-box {
-    margin-bottom: 163px;
-  }
-  .footer-section .footer-chat-img {
-    right: 15px;
-    top: 224px;
-  }
-  .footer-section .company-text ul li {
-    margin-bottom: 10px;
-  }
+
+
     /* our services */
   /* .our-services-section {
     padding: 100px 0;
@@ -1451,21 +1372,8 @@
     width: 930px;
     height: 324px;
   }
-  /* footer-section */
-  .footer-section {
-    padding: 94px 0 0;
-  }
-  .footer-section .footer-next-list {
-    font-size: 24px;
-    line-height: 30px;
-  }
-  .footer-section .footer-list .icon-list-box1 .form-btn button {
-    padding: 19px 57px 19px 57px !important;
-  }
-  /* about-page */
-  .home-header-section .sub-banner-section p {
-    padding: 0 24%;
-  }
+
+  
   /* .home-header-section .sub-banner-section {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1813,22 +1721,6 @@
     padding: 39px 36px 30px 37px;
     top: -200px;
     left: 0;
-  }
-  .footer-section .company-text{
-    padding-left: 65px;
-    padding-top: 35px;
-  }
-  .footer-section .footer-ul2 {
-    padding-left:8px;
-  }
-  .footer-section .footer-right-box {
-    padding: 53px 31px 28px;
-    width: 340px;
-    height: 340px;
-    margin-top: -30px;
-  }
-  .footer-section .footer-end-text {
-    padding-left: 0;
   }
   }
   
@@ -2356,9 +2248,7 @@
   .insta-feed-section .insta-bird-fig img{
     width: 67%;
   }
-  .insta-feed-section {
-    padding: 71px 0 422px;
-  }
+
   /* form-section */
   .form-section .hearts-img {
     top: 53px;
@@ -2551,61 +2441,7 @@
     margin-bottom: 15px;
     padding: 0 0px !important;
   }
-  /* footer-section */
-  .footer-section .planning-h3 {
-    margin-bottom: 0px;
-    font-size: 29px;
-    line-height: 36px;
-  }
-  .footer-section .banner-btn {
-    margin-left: -60px;
-  }
-  .footer-section .banner-btn a {
-    padding: 14px 30px 16px 30px;
-  }
-  .footer-section .learn-btn {
-    margin-left: 5px;
-  }
-  .footer-section .learn-btn a {
-    padding: 14px 28px 14px 28px;
-  }
-  .footer-section .footer-right-box {
-    padding: 51px 26px 28px;
-    width: 340px;
-    height: 325px;
-    margin-top: -100px;
-  }
-  .footer-section .footer-list .icon-list-box1 .footer-location3 {
-    left: 55px;
-    margin-top: -8px;
-  }
-  .footer-section .contact-list {
-    padding-left: 89px;
-    padding-top: 22px;
-  }
-  .footer-section .footer-section-text {
-    margin-bottom: 12px;
-  }
-  .footer-section .footer-logo {
-    margin-bottom: 12px;
-  }
-  .footer-section .footer-end-text {
-    font-size: 14px;
-    line-height: 18px;
-    padding-left: 33px;
-    margin-top: -51px;
-  }
-  .footer-section .footer-content-box {
-    margin-bottom: 113px;
-  }
-  .footer-section .footer-hearts {
-    left: 29px;
-    top: 175px;
-    display: none;
-  }
-  .footer-section {
-    padding: 64px 0 40px;
-  }
+
     /* our services */
   /* .our-services-section {
     padding: 84px 0;
@@ -2896,29 +2732,6 @@
     margin-bottom: 3px;
   }
     /* footer */
-  .footer-section .footer-icon {
-    position: absolute;
-    left: -8px;
-    top: -320px;
-  }
-  .footer-section .footer-outer-margin {
-    padding-bottom: 46px;
-  }
-  .form-section-starts {
-    padding: 86px 0;
-  } 
-  .footer-section .footer-content1 figure {
-    margin-bottom: 10px;
-  }
-  .footer-section .footer-content1 {
-    padding-top: 0px;
-   }
-  .footer-section .footer-margin-left {
-    margin-bottom: 10px;
-  }
-  .footer-section .footer-get-heading {
-    margin-bottom: 0px;
-  }
   /* about-page */
   .whychooseus-section {
       padding:70px 0 0;
@@ -3694,9 +3507,7 @@
   .insta-feed-section .insta-section-imgs-mb{
     margin-bottom: 0 !important;
   }
-  .insta-feed-section {
-    padding: 71px 0 316px;
-  }
+
   /* counter-section */
   .counter-section .counter-section-fig img {
     width: 534px;
@@ -4051,38 +3862,7 @@
   .our-teams-section .about-us-content .our-teamp2 {
     margin-bottom: 22px;
   }
-  /* footer-section */
-  .footer-section .footer-list .icon-list-box1 .form-btn button {
-    padding: 15px 50px 16px 50px !important;
-    line-height: 18px;
-    font-size: 16px;
-  }
-  .footer-section .form-control {
-    height: 52px;
-  }
-  .footer-section {
-    padding: 55px 0 0;
-  }
-  .footer-section .marginLeft {
-    font-size: 14px;
-    border-radius: 11px;
-    width: 44px;
-    height: 44px;
-    line-height: 44px !important;
-  }
-  .footer-bar .footer-bar-content {
-    margin-top: 47px;
-  }
-  .footer-section .footer-bar .footer-bar-content p {
-    font-size: 14px;
-    line-height: 14px;
-  }
-  .footer-section .footer-content1 figure img {
-    text-align: center;
-    margin-bottom: 5px;
-    width: 62%;
-  }
-  /* about-page */
+
   .home-header-section .sub-banner-section {
     padding-top: 60px;
     padding-bottom:0px;
@@ -5093,9 +4873,6 @@
   .insta-feed-section .insta-section-imgs-mb {
     margin-bottom: 20px !important;
   }
-  .insta-feed-section {
-    padding: 44px 0 190px;
-  }
   .insta-feed-section .insta-fig {
     margin-bottom: 10px;
   }
@@ -5378,11 +5155,6 @@
     margin-bottom: 5px;
   }
   
-  /* footer-section */
-  .footer-section .footer-bar .footer-bar-content p {
-    font-size: 12px;
-    line-height: 12px;
-  }
   h2 {
     font-size: 22px;
     line-height: 27px;
@@ -5403,25 +5175,7 @@
    .navbar-collapse {
     width: 50% !important;
   }
-  .footer-section .signupbox {
-   display: none;
-  }
-  .footer-bar .footer-bar-content {
-    margin-top: 43px;
-  }
-  .footer-section .footer-section-text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  .footer-section .footer-content1 figure img {
-    text-align: center;
-    margin-bottom: 0px;
-    width: 48%;
-  }
-  .footer-section .footer-content1 {
-    padding-top: 0px;
-    text-align: center;
-  }
+
   .redlight-dropdown .dropdown-content-redlight {
     width: 100%;
     top: 54px;
@@ -5801,3 +5555,4 @@
       margin-bottom: 40px;
   }
 }
+
