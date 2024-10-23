@@ -79,11 +79,11 @@ def make_reservation(request):
 
 
             # Render HTML email for admin
-            admin_html_content = render_to_string('admin_email_template.html', admin_context)
+            admin_html_content = render_to_string('myApp/admin_email_template.html', admin_context)
             admin_text_content = strip_tags(admin_html_content)
 
             # Create and send admin email
-            admin_email = EmailMultiAlternatives(admin_subject, admin_text_content, 'hello@beyondlogisticsevent.com', ['hello@beyondlogisticsevent.com'])
+            admin_email = EmailMultiAlternatives(admin_subject, admin_text_content, 'hello@beyondlogisticsevents.com', ['hello@beyondlogisticsevents.com'])
             admin_email.attach_alternative(admin_html_content, "text/html")
             admin_email.send()
 
@@ -109,7 +109,7 @@ def send_confirmation_email(client_name, client_email):
     }
 
     # Render the HTML template with context
-    html_content = render_to_string('customer_email_template.html', context)
+    html_content = render_to_string('myApp/customer_email_template.html', context)
     text_content = strip_tags(html_content)  # Fallback for email clients that don't support HTML
 
     # Create email
