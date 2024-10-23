@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>New Event Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #5860F8;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .content {
+            padding: 30px 20px;
+            text-align: left;
+            background-color: #ffffff;
+        }
+        .content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #888;
+            font-size: 12px;
+        }
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Email Header -->
+        <div class="header">
+            <h1>New Event Reservation</h1>
+        </div>
+
+        <!-- Email Content -->
+        <div class="content">
+            <p>Hello Admin,</p>
+            <p>A new event reservation has been submitted with the following details:</p>
+            
+            <ul>
+                <li><strong>Event Date:</strong> {{ event_date }}</li>
+                <li><strong>Event Type:</strong> {{ event_type }}</li>
+                <li><strong>Celebrant's Name:</strong> {{ celebrant_name }}</li>
+                <li><strong>Event Address:</strong> {{ event_address }}</li>
+                <li><strong>Invite Time:</strong> {{ invite_time }}</li>
+                <li><strong>Client’s Name:</strong> {{ client_name }}</li>
+                <li><strong>Relationship to Celebrant:</strong> {{ relationship }}</li>
+                <li><strong>Email Address:</strong> {{ email }}</li>
+                <li><strong>Contact Number:</strong> {{ contact_number }}</li>
+                <li><strong>Number of Guests:</strong> {{ guests }}</li>
+                <li><strong>Venue:</strong> {{ venue }}</li>
+            </ul>
+            
+            <p>Please make sure to follow up with the client to confirm the details of the event.</p>
+        </div>
+
+        <!-- Email Footer -->
+        <div class="footer">
+            <p>Beyond Logistics Events | Professional Event Planning and Management</p>
+        </div>
+    </div>
+</body>
+</html>

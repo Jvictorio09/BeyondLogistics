@@ -51,7 +51,11 @@ def make_reservation(request):
             # Get form data
             event_date = form.cleaned_data['event_date']
             event_type = form.cleaned_data['event_type']
+            celebrant_name = form.cleaned_data['celebrant_name']
+            event_address = form.cleaned_data['event_address']
+            invite_time = form.cleaned_data['invite_time']
             client_name = form.cleaned_data['client_name']
+            relationship = form.cleaned_data['relationship']
             email = form.cleaned_data['email']
             contact_number = form.cleaned_data['contact_number']
             guests = form.cleaned_data['guests']
@@ -62,12 +66,17 @@ def make_reservation(request):
             admin_context = {
                 'event_date': event_date,
                 'event_type': event_type,
+                'celebrant_name': celebrant_name,
+                'event_address': event_address,
+                'invite_time': invite_time,
                 'client_name': client_name,
+                'relationship': relationship,
                 'email': email,
                 'contact_number': contact_number,
                 'guests': guests,
                 'venue': venue
             }
+
 
             # Render HTML email for admin
             admin_html_content = render_to_string('admin_email_template.html', admin_context)

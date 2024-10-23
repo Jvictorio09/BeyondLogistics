@@ -502,7 +502,9 @@
                                         <option value="">Select Type of Event:</option>
                                         <option>Wedding</option>
                                         <option>Debut</option>
-                                        <option>Birthday</option>
+                                        <option>First Birthday</option>
+                                        <option>Baptism</option>
+                                        <option>Christening</option>
                                         <option>Corporate</option>
                                         <option>Others</option>
                                     </select>
@@ -513,7 +515,35 @@
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group contact-form-margin">
                                     <i class="fa-solid fa-user icons-form"></i>
+                                    <input type="text" class="form-control input-text" id="celebrantName" placeholder="Celebrant’s Complete Name" name="celebrant_name" required="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group contact-form-margin">
+                                    <i class="fa-solid fa-map-marker-alt icons-form"></i>
+                                    <input type="text" class="form-control input-text" id="eventAddress" placeholder="Event Address" name="event_address" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group contact-form-margin">
+                                    <i class="fa fa-clock icons-form"></i>
+                                    <input type="time" class="form-control input-text" id="inviteTime" placeholder="Invite Time" name="invite_time" required="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group contact-form-margin">
+                                    <i class="fa-solid fa-user icons-form"></i>
                                     <input type="text" class="form-control input-text" id="clientName" placeholder="Client’s Name" name="client_name" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group contact-form-margin">
+                                    <i class="fa-solid fa-users icons-form"></i>
+                                    <input type="text" class="form-control input-text" id="relationship" placeholder="Relationship to the Celebrant" name="relationship" required="">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -532,7 +562,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12">
                                 <div class="form-group contact-form-margin">
-                                    <i class="fa-solid fa-people-group icons-form"></i>
+                                    <i class="fa-solid fa-users icons-form"></i>
                                     <input type="number" class="form-control input-text" id="guestsNumber" placeholder="Number of Guests" name="guests" required="">
                                 </div>
                             </div>
@@ -549,6 +579,7 @@
         </div>
     </div>
 </section>
+
 
 
 <div class="partners-section">
@@ -595,7 +626,7 @@
                 <figure class="mb-0 insta-section-imgs">
                     <img src="{% static 'assets/images/insta-section-img1.png' %}" alt="" class="img-fluid">
                     <div class="hover_box_plus">
-                        <a href="https://www.instagram.com/beyondlogisticsevents/"><i class="fa-brands fa-instagram"></i>Beyond Logistics </a>
+                        <a href="https://www.instagram.com/beyondlogisticsevents/  "><i class="fa-brands fa-instagram"></i>Beyond Logistics </a>
                     </div>
                 </figure>
             </div>
