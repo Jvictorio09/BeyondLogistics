@@ -164,7 +164,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 # Get environment variables with fallback values
-EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.example.com')  # Replace with your default email host
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')  # Replace with your default email host
 EMAIL_PORT = os.getenv('EMAIL_PORT', 587)  # Default email port
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')  # Boolean handling
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')  # No fallback for sensitive data
