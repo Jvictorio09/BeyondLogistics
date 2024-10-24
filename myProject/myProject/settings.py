@@ -34,6 +34,8 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://beyondlogistics-production.up.railway.app']
+
 
 
 # Application definition
