@@ -470,6 +470,14 @@
 
 <!-- Other content of index.html -->
 
+{% if messages %}
+    <div class="alert alert-success">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+{% endif %}
+
 <section id="form-section" class="form-section overflow-hidden">
     <div class="container">
         <div class="row">
@@ -484,7 +492,7 @@
                     <h2 class="contact-us-title">Reserve Your Special Day</h2>
                     <p>Let us bring your vision to life, from intimate gatherings to grand celebrations, making every moment unforgettable.</p>
 
-                    <form id="form_id" method="post" action="{% url 'make_reservation' %}">
+                    <form id="form_id" method="post" action="{% url 'make_reservation' %}" onsubmit="showConfirmationMessage(event);">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -655,5 +663,15 @@
         </div>
     </div>
 </section>
+
+<script>
+    function showConfirmationMessage(event) {
+        event.preventDefault();  // Prevent immediate submission
+        alert('Thank you! We’ve received your details and will be in touch shortly with a confirmation email.');
+        // Programmatically submit the form after showing the alert
+        document.getElementById("form_id").submit();
+    }
+</script>
+
 
 {% endblock %}
